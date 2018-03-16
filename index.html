@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>chatter|app</title>
-
+    <!-- embed external JavaScript -->
+    <script src="JS/script.js"></script>
     <!-- #4 embed the #roboto #font. This needs to go above your css -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
-
-    
 </head>
-<body>
-<!-- #4 #one #page -->
-<div id="channels">
-    <h1>
-        <!-- #3 #channels #moocus the talkative duck-->
-        <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" style="height: 56px;">
-        chatter|app
-    </h1>
 
+<body>
+    <!-- #4 #one #page -->
+    <div class="appbar-left">
+        <h1>
+            <!-- #3 #channels #moocus the talkative duck-->
+            <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" class="moocus" alt="Moocus, the chatty duck!" style="height: 64px;"> chatter|app
+        </h1>
+    </div>
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li id="channelName">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" class="channel-meta" alt="not starred"><i class="arrow right"></i></span>
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li id="channelName" class="selected">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star.png" class="channel-meta" alt="starred"><i class="arrow right"></i></span>
         </li>
-        <li>#KillerApp
+        <li id="channelName">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" class="channel-meta" alt="not starred"><i class="arrow right"></i></span>
+
         </li>
-        <li>#FirstPersonOnMars
+        <li id="channelName">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star.png" class="channel-meta" alt="starred"><i class="arrow right"></i></span>
         </li>
-        <li>#Octoberfest
+        <li id="channelName">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star-o.png" class="channel-meta" alt="not starred"><i class="arrow right"></i></span>
         </li>
+
     </ul>
+</body>
+
+<body>
 
     <!-- #3 #tab-bar #container -->
     <!-- #4 #sweat #tab-bar -->
@@ -68,16 +73,17 @@
             Favorites
         </button>
     </div>
-</div>
 
-<!-- #4 #one #page -->
-<div id="chat">
-    <h1>
-        #SevenContinents
-        <small>by
-            <strong>cheeses.yard.applies</strong>
-        </small>
-    </h1>
+    <!-- #4 #one #page -->
+    <div class="appbar-right">
+        <h1>
+            #SevenContinents
+            <small> by<strong> cheeses.yard.applies</strong></small>
+            <span><img src="http://ip.lfe.mw.tum.de/sections/star.png" class="channel-star" alt="starred"></span>
+        </h1>
+
+    </div>
+
 
     <!-- #3 #chat #container -->
     <!-- #4 assign a #class to all your #messages to address them with css -->
@@ -87,12 +93,11 @@
             <!-- #3 #chat #location points to w3w in a new tab -->
             <a href="http://w3w.co/cheeses.yard.applies" target="_blank">
                 <strong>cheeses.yard.applies</strong>
-            </a>
-            Wed, June 20th, 13:37
+            </a> Wed, June 20th, 13:37
             <em>15 min. left</em>
         </h3>
-        <p>What's the place you folks call home?</p>
-        <button>+5 min.</button>
+        <p>What's the place you folks call home?
+            <button>+5 min.</button></p>
     </div>
 
     <!-- #3 #chat #container -->
@@ -103,11 +108,11 @@
             <a href="http://w3w.co/truck.cotton.zone" target="_blank">
                 <strong>truck.cotton.zone</strong>
             </a>
-            Wed, June 20th, 13:39
+            <div class="date-container">Wed, June 20th, 13:39</div>
             <em>4 min. left</em>
         </h3>
-        <p>BRISBANE! Hang loose!</p>
-        <button>+5 min.</button>
+        <p>BRISBANE! Hang loose!
+            <button>+5 min.</button></p>
     </div>
 
     <!-- #3 #chat #container -->
@@ -118,11 +123,11 @@
             <a href="http://w3w.co/thus.best.dishes" target="_blank">
                 <strong>thus.best.dishes</strong>
             </a>
-            Wed, June 20th, 14:02
+            <div class="date-container">Wed, June 20th, 14:02</div>
             <em>12 min. left</em>
         </h3>
-        <p>The big apple.</p>
-        <button>+5 min.</button>
+        <p>The big apple.
+            <button>+5 min.</button></p>
     </div>
 
     <!-- #3 #chat #container -->
@@ -133,11 +138,11 @@
             <a href="http://w3w.co/driveway.helper.magazine" target="_blank">
                 <strong>driveway.helper.magazine</strong>
             </a>
-            Wed, June 20th, 14:02
+            <div class="date-container">Wed, June 20th, 14:02</div>
             <em>7 min. left</em>
         </h3>
-        <p>Eu sou um Cariocas.</p>
-        <button>+5 min.</button>
+        <p>Eu sou um Cariocas.
+            <button>+5 min.</button></p>
     </div>
 
     <!-- #3 #chat #container -->
@@ -148,11 +153,11 @@
             <a href="http://w3w.co/escapes.pitch.saucepan" target="_blank">
                 <strong>escapes.pitch.saucepan</strong>
             </a>
-            Wed, June 20th, 14:07
+            <div class="date-container">Wed, June 20th, 14:07</div>
             <em>14 min. left</em>
         </h3>
-        <p>Greetings from the western cape!</p>
-        <button>+5 min.</button>
+        <p>Greetings from the western cape!
+            <button>+5 min.</button></p>
     </div>
 
     <!-- #3 #chat #container -->
@@ -163,13 +168,21 @@
             <a href="http://w3w.co/meanings.identity.pays" target="_blank">
                 <strong>meanings.identity.pays</strong>
             </a>
-            Wed, June 20th, 04:08
+            <div class="date-container">Wed, June 20th, 04:08</div>
             <em>15 min. left</em>
         </h3>
-        <p>北京</p>
-        <button>+5 min.</button>
+        <p>北京
+            <button>+5 min.</button></p>
     </div>
-</div>
+
+    <div id="emojis-button">&#x1F601; &#x1F603; &#x1F923;&#x1F605; &#x1F609; &#x1F60A; &#x1F60D;
+
+    </div>
+
+    <div> <button id="chat-bar">&#x1F600;</button>
+    </div>
+
 
 </body>
+
 </html>
